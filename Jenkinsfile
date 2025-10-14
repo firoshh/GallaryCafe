@@ -15,12 +15,12 @@ pipeline {
                 sh 'docker build -t gallary-cafe-app .'
             }
         }
-        stage('Deploy Application') {
-            steps {
-                echo 'Deploying the GallaryCafe app and database...'
-                sh 'docker compose down'
-                sh 'docker compose up -d'
-            }
-        }
+stage('Deploy Application') {
+    steps {
+        echo 'Deploying the GallaryCafe app and database...'
+        sh 'docker-compose down'
+        sh 'docker-compose up -d'
+    }
+}
     }
 }
