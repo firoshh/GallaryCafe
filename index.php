@@ -18,7 +18,7 @@ include 'header.php'; // Include the common header
     <main>
         <!-- Welcome Message -->
         <div class="welcome">
-            <h1>Welcome to The Gallery Cafe</h1>
+            <h1>Welcome to The Automated Gallery Cafe</h1>
             <p>Discover our delicious menu and enjoy a memorable dining experience. Explore our selection of meals and beverages.</p>
             <a href="menu.php" class="see-menu-button">See the Menu</a>
         </div>
@@ -100,6 +100,7 @@ include 'header.php'; // Include the common header
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
