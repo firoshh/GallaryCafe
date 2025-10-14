@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout from GitHub') {
             steps {
                 echo 'Getting the latest GallaryCafe code...'
-                git url: 'https://github.com/your-username/GallaryCafe.git', branch: 'main' // <-- CHANGE THIS
+                git url: 'https://github.com/firoshh/GallaryCafe', branch: 'main' // <-- CHANGE THIS
             }
         }
         stage('Build Docker Image') {
