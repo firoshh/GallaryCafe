@@ -7,7 +7,7 @@ include 'header.php'; // Include the common header
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hii Welcome to Automated The Gallery Cafeee</title>
+    <title>Successfully Automated.</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
