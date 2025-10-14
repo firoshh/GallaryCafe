@@ -7,7 +7,7 @@ include 'header.php'; // Include the common header
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Gallery Café</title>
+    <title>The Gallery Cafee</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -100,4 +100,5 @@ include 'header.php'; // Include the common header
     <script src="script.js"></script>
 </body>
 </html>
+
 
