@@ -2,13 +2,12 @@ pipeline {
     agent any
 
     stages {
-        // NEW STAGE: This will run first and install docker-compose
+        // This stage will now install ALL the tools Jenkins needs
         stage('Setup Tools') {
             steps {
-                echo 'Installing docker-compose...'
-                // The Jenkins container runs as root, so we can use apt
+                echo 'Installing Docker and Docker-Compose...'
                 sh 'apt-get update'
-                sh 'apt-get install -y docker-compose'
+                sh 'apt-get install -y docker.io docker-compose'
             }
         }
 
@@ -22,6 +21,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building the GallaryCafe container...'
+                // This will use the docker.io we just installed
                 sh 'docker build -t gallary-cafe-app .'
             }
         }
@@ -29,6 +29,7 @@ pipeline {
         stage('Deploy Application') {
             steps {
                 echo 'Deploying the GallaryCafe app and database...'
+                // This will use the docker-compose we just installed
                 sh 'docker-compose down'
                 sh 'docker-compose up -d'
             }
