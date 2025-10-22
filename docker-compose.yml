@@ -6,9 +6,7 @@ services:
     container_name: gallary_cafe_app
     ports:
       - "8000:80"
-    volumes:
-      - .:/var/www/html
-
+    # The volumes line is now GONE.
   db:
     image: mysql:8.0
     container_name: gallary_cafe_db
