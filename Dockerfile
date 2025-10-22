@@ -1,6 +1,7 @@
 FROM php:apache
 RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 COPY . /var/www/html/
+COPY images /var/www/html/images/
     
 # These commands will now work because they are running
 # on the files INSIDE the image, which won't be covered up.

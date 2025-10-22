@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo 'Building the GallaryCafe container...'
                 // This will use the docker.io we just installed
-                sh 'docker build -t gallary-cafe-app .'
+                sh 'docker build --no-cache -t gallary-cafe-app .'
             }
         }
         
