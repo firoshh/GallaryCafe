@@ -19,7 +19,6 @@ include 'header.php'; // Include the common header
         <!-- Welcome Message -->
         <div class="welcome">
             <h1>Welcome to Automated Gallery Cafe </h1>
-            <h1>Welcome to Automated Gallery Cafe </h1>
             <p>Discover our delicious menu and enjoy a memorable dining experience. Explore our selection of meals and beverages.</p>
             <a href="menu.php" class="see-menu-button">See the Menu</a>
         </div>
