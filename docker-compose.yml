@@ -1,17 +1,23 @@
 version: '3.8'
 
 services:
+  # 'web' must be indented 2 spaces
   web:
     build: .
     container_name: gallary_cafe_app
     ports:
       - "8000:80"
-    # The volumes line is now GONE.
-db:
+    volumes:
+      # We removed the volume mount here in the previous step - keep it removed!
+      # No volume mount for code here.
+
+  # 'db' must be indented 2 spaces, same level as 'web'
+  db:
     image: mysql:8.0
     container_name: gallary_cafe_db
+    # This ports line is what you added - make sure it's indented 4 spaces
     ports:
-      - "3307:3306"  # <-- ADD THIS LINE
+      - "3307:3306"
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: your_strong_root_password
@@ -21,5 +27,6 @@ db:
     volumes:
       - db-data:/var/lib/mysql
 
+# 'volumes' must have ZERO indentation
 volumes:
   db-data:
