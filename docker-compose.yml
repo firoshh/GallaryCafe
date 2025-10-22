@@ -1,25 +1,23 @@
 version: '3.8'
 
 services:
-  # This is your PHP/Apache container (the GallaryCafe app)
   web:
     build: .
     container_name: gallary_cafe_app
     ports:
-      - "8000:80" # Access your app at http://<your_ip>:8000
+      - "8000:80"
     volumes:
       - .:/var/www/html
 
-  # This is your MySQL database container
   db:
     image: mysql:8.0
     container_name: gallary_cafe_db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: your_strong_root_password  # CHANGE THIS
+      MYSQL_ROOT_PASSWORD: your_strong_root_password
       MYSQL_DATABASE: gallary_cafe_db
-      MYSQL_USER: gallary_user                        # CHANGE THIS
-      MYSQL_PASSWORD: your_strong_user_password     # CHANGE THIS
+      MYSQL_USER: gallary_user
+      MYSQL_PASSWORD: your_strong_user_password
     volumes:
       - db-data:/var/lib/mysql
 
